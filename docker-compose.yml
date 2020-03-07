@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+    php: 
+        image: php:7.2-apache
+        container_name: lemp_php7_2_apache
+        restart: always
+        volumes:
+            - ${PWD}/src:/var/www/html
+        ports:
+            - 8011:80
